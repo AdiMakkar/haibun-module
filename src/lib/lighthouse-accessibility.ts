@@ -13,7 +13,7 @@ export async function checkAccessibility(uri: String) {
     const result = await playAudit({
         page,
         thresholds: {
-            accessibility: 5,
+            accessibility: 95,
         },
         port: 9171
     });
