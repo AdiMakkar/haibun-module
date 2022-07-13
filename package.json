@@ -9,7 +9,7 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "eslint -c .eslintrc.json --ext .ts,.js src",
-    "test": "jest --config jest.config.ts",
+    "test": "jest --config jest.config.js",
     "test-haibun": "build/cli.js test/projects/web",
     "coverage": "jest --config jest.config.ts --coverage",
     "test-watch": "jest --watch",
@@ -28,22 +28,16 @@
     "@haibun/core": "1.9",
     "@haibun/domain-storage": "1.9",
     "@haibun/out-review": "^1.9.3",
-    "@types/sarif": "^2.1.4",
-    "chrome-launcher": "^0.15.1",
-    "f": "^1.4.0",
-    "fs": "^0.0.1-security",
-    "jest": "^28.1.2",
-    "node.js": "^0.0.1-security",
-    "path": "^0.12.7",
-    "res": "^0.4.0",
-    "ts-jest": "^28.0.5",
+    "axios": "^0.27.2",
+    "lighthouse": "^9.6.3",
+    "playwright": "^1.23.2",
+    "playwright-lighthouse": "^2.2.2",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   },
   "devDependencies": {
     "@types/jest": "^28.1.4",
-    "lighthouse": "^9.6.3",
-    "playwright": "^1.23.2",
-    "playwright-lighthouse": "^2.2.2"
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5"
   }
 }

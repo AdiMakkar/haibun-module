@@ -1,4 +1,3 @@
-import { Log } from 'accessibility';
 import { AStepper, IHasOptions, OK, TNamed, TWorld } from '@haibun/core/build/lib/defs';
 import { findStepperFromOption, stringOrError } from '@haibun/core/build/lib/util';
 
@@ -41,7 +40,7 @@ class accessibility extends AStepper implements IHasOptions {
   }
   async indexAccessibility(loc: string) {
     const contents = await this.accessibilitySource!.readFile(loc, 'utf-8');
-    const accessibility: Log = JSON.parse(contents);
+    // const accessibility: Log = JSON.parse(contents);
 
     const dir = this.indexDest!.fromCaptureLocation(EMediaTypes.json, 'accessibility');
     const dest = this.indexDest!.fromCaptureLocation(EMediaTypes.json, 'accessibility', 'indexed.json');
@@ -53,16 +52,6 @@ class accessibility extends AStepper implements IHasOptions {
       indexTitle: 'Parsed ACCESSIBILITY',
       results: <TIndexSummaryResult[]>[]
     }
-    for (const result of accessibility.runs[0].results!) {
-      const f = {
-        ok: result.level !== 'error',
-        featureTitle: result.message.text || 'no message',
-        sourcePath: dest
-      }
-      ret.results.push(f);
-    }
-    await this.indexDest!.ensureDirExists(dir);
-    await this.indexDest!.writeFile(dest, JSON.stringify(ret), EMediaTypes.json);
   }
 }
 
