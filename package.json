@@ -1,0 +1,44 @@
+{
+  "name": "@haibun/sarif",
+  "version": "1.9.3",
+  "description": "sarif index for haibun",
+  "main": "build/sarif",
+  "files": [
+    "build/"
+  ],
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "eslint -c .eslintrc.json --ext .ts,.js src",
+    "test": "jest --config jest.config.ts",
+    "test-haibun": "build/cli.js test/projects/web",
+    "coverage": "jest --config jest.config.ts --coverage",
+    "test-watch": "jest --watch",
+    "build": "tsc -b .",
+    "tsc-watch": "tsc --watch",
+    "tsc": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "tsc -b .",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@haibun/core": "1.9",
+    "@haibun/domain-storage": "1.9",
+    "@haibun/out-review": "^1.9.3",
+    "@types/sarif": "^2.1.4",
+    "jest": "^28.1.2",
+    "node.js": "^0.0.1-security",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "lighthouse": "^9.6.3",
+    "playwright": "^1.23.1",
+    "playwright-lighthouse": "^2.2.2"
+  }
+}

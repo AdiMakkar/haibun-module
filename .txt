@@ -1,0 +1,12 @@
+node to ts ??
+json file 
+node.js vs typescript - environment differences?
+decalration of default values 
+authenticated further down the road - safe default 
+testing - haibiun library test 
+-root node.js issue
+
+refactor cmd shift i 
+accesibility check 
+
+import defualt, return, res,
