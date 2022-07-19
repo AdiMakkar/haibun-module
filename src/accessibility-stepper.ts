@@ -8,7 +8,7 @@ import { EMediaTypes } from '@haibun/domain-storage';
 const TRACE_STORAGE = 'TRACE_STORAGE';
 const INDEX_STORAGE = 'INDEX_STORAGE';
 
-class accessibility extends AStepper implements IHasOptions {
+class AccessibilityStepper extends AStepper implements IHasOptions {
   accessibilitySource?: AStorage;
   indexDest?: AStorage;
 
@@ -31,9 +31,9 @@ class accessibility extends AStepper implements IHasOptions {
 
   steps = {
     indexAccessibility: {
-      gwta: `index the accessibility file at {where}`,
+      gwta: `check the accessibility at {where}`,
       action: async ({ where }: TNamed) => {
-        await this.indexAccessibility(where);
+        const value = await this.indexAccessibility(where);
         return OK;
       }
     },
@@ -55,4 +55,4 @@ class accessibility extends AStepper implements IHasOptions {
   }
 }
 
-export default accessibility;
+export default AccessibilityStepper;
