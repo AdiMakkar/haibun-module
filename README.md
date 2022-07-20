@@ -1,10 +1,10 @@
-# Haibun-web-accessibility-lighthouse
+# haibun-web-accessibility-lighthouse
 
 Haibun Web Accessibility Lighthouse is a module that incorporates Haibun's integration and testing with that of Lighthouse, an open source API used for measuring the quality of web pages. 
 
 ## Installation
 
-Normally, libraries from this repository will be included in a project like any other, or used via the cli, for example, using `npx @haibun/cli`. For more information you can visit 'Haibun' at 'https://github.com/withhaibun/haibun'
+Normally, libraries from this repository will be included in a project like any other, or used via the cli, for example, using `npx @haibun/cli`. For more information you can visit `Haibun` at `https://github.com/withhaibun/haibun`
 
 ### Lighthouse 
 
@@ -12,7 +12,7 @@ Lighthouse is a tool developed by Google that analyzes web apps and web pages, c
 
 To download: 
 
-'npm i lighthouse' 
+`npm i lighthouse`
 
 ### Playwright-Lighthouse 
 
@@ -20,7 +20,7 @@ Playwright is a Node library to automate Chromium, Firefox and WebKit with a sin
 
 To download: 
 
-'npm i playwright-lighthouse'
+`npm i playwright-lighthouse`
 
 With the requirement of 'ligthouse','playwright', and 'playwright-ligthouse', add them to your project:
 
