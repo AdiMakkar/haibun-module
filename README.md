@@ -10,10 +10,6 @@ Normally, libraries from this repository will be included in a project like any 
 
 Lighthouse is a tool developed by Google that analyzes web apps and web pages, collecting modern performance metrics and insights on developer best practices.
 
-To download: 
-
-`npm i lighthouse`
-
 ### Playwright-Lighthouse 
 
 Playwright is a Node library to automate Chromium, Firefox and WebKit with a single API. Also built to enable cross-browser web automation that is ever-green, capable, reliable and fast.
