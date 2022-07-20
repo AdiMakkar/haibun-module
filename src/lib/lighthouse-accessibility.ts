@@ -10,10 +10,10 @@ export async function checkAccessibility(uri: String) {
     const page = await browser.newPage();
     await page.goto(uri);
 
-    const result = await playAudit({
+    const result = await playAudit({ // only accessibility as the metric for performance thresholds
         page,
         thresholds: {
-            accessibility: 95,
+            accessibility: 90,
         },
         port: 9171
     });

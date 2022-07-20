@@ -61,6 +61,6 @@ describe('test audits with local server ', () => {
         const scored = Object.entries(res.lhr.audits).filter(([audit, values]) => values.score !== null)
             .map(([audit, value]) => ({ audit, score: value.score }));
 
-        expect(scored.every(({ score }) => score > 0)).toBe(true); // lighthouse documentation - value 
+        expect(scored.every(({ score }) => score > 90)).toBe(true); // lighthouse documentation - value (value 90)
     });
 })

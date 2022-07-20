@@ -22,7 +22,7 @@ To download:
 
 `npm i playwright-lighthouse`
 
-With the requirement of 'ligthouse','playwright', and 'playwright-ligthouse', add them to your project:
+With the requirement of 'lighthouse', 'playwright', and 'playwright-lighthouse', add them to your project:
 
 ```sh
 $ yarn add -D playwright-lighthouse playwright lighthouse
