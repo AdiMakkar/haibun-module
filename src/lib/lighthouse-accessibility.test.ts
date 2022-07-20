@@ -26,19 +26,8 @@ class TestHttpServer {
     }
 }
 
-
 jest.setTimeout(30000);
 let server = new TestHttpServer();
-
-type TLighthouseReport = {
-    lhr: {
-        audits: {
-            [audit: string]: {
-                score: number
-            }
-        }
-    }
-}
 
 describe('test audits with local server ', () => {
     beforeAll(async () => {
@@ -56,11 +45,8 @@ describe('test audits with local server ', () => {
     })
     it('passes', async () => {
         const uri = 'http://localhost:8080/passes.html';
-        const res: TLighthouseReport = await checkAccessibility(uri);
+        const res = await checkAccessibility(uri);
 
-        const scored = Object.entries(res.lhr.audits).filter(([audit, values]) => values.score !== null)
-            .map(([audit, value]) => ({ audit, score: value.score }));
-
-        expect(scored.every(({ score }) => score > 90)).toBe(true); // lighthouse documentation - value (value 90)
+        expect(res.ok).toBe(true);
     });
 })
