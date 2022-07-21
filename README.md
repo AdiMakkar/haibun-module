@@ -71,3 +71,4 @@ To develop your own separate module while developing Haibun modules, use:
 `npm link @haibun/core`
 
 and any other modules you may need.
+ 
