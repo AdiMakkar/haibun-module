@@ -8,14 +8,15 @@ class TestHttpServer {
     constructor() {
         this.server = createServer(async (req, res) => {
             if (req.url == '/passes.html') {
-                const contents = readFileSync('./test/passes.html', 'utf-8');
+                const contents = readFileSync('./files/test/passes.html', 'utf-8');
                 res.writeHead(200);
                 res.end(contents)
             } else if (req.url == 'fails.html') {
+                res.end(404);
             } else {
                 throw Error(`no such path ${req.url}`)
+                res.end(404);
             }
-            res.end();
         });
     }
     listen() {

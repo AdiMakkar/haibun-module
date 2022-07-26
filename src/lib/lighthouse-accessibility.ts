@@ -1,9 +1,12 @@
-import { findStepper } from "@haibun/core/build/lib/util";
-
 const { playAudit } = require('playwright-lighthouse');
 const playwright = require('playwright');
 
 type TLighthouseReport = {
+    failure?: {
+        error: {
+            message: string
+        }
+    }
     lhr: {
         audits: {
             [audit: string]: {
@@ -30,10 +33,9 @@ export async function checkAccessibility(uri: String) {
     await browser.close();
 
     const scored = Object.entries(result.lhr.audits).filter(([audit, values]) => values.score !== null)
-            .map(([audit, value]) => ({ audit, score: value.score }));
-            console.log(scored);
-            
-        const ok = (scored.every(({ score }) => score > 90));
+        .map(([audit, value]) => ({ audit, score: value.score }));
 
-    return { ok,result };
+    const ok = (scored.every(({ score }) => score > 90));
+
+    return { ok, result };
 };
