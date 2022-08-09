@@ -2308,6 +2308,12 @@
         "entryType": "measure"
       },
       {
+        "startTime": 15221.883926987648,
+        "name": "lh:gather:afterPass:FullPageScreenshot",
+        "duration": 5125.05725300312,
+        "entryType": "measure"
+      },
+      {
         "startTime": 12713.042897939682,
         "name": "lh:gather:beforePass:FullPageScreenshot",
         "duration": 0.023643016815185547,
@@ -2359,12 +2365,6 @@
         "startTime": 15074.281253933907,
         "name": "lh:gather:afterPass:Accessibility",
         "duration": 147.57863104343414,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 15221.883926987648,
-        "name": "lh:gather:afterPass:FullPageScreenshot",
-        "duration": 5125.05725300312,
         "entryType": "measure"
       },
       {

@@ -23,11 +23,16 @@ export async function checkAccessibility(uri: String) {
     const page = await browser.newPage();
     await page.goto(uri);
 
+    const lighthouseConfig = {
+        /* ... your lighthouse configs */
+      };
+ 
     const result: TLighthouseReport = await playAudit({ // only accessibility as the metric for performance thresholds
         page,
         thresholds: {
             accessibility: 89, // passing value confirmed > 90
         },
+        config:lighthouseConfig,
         port: 9171
     });
     await browser.close();
