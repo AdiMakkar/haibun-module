@@ -24,7 +24,6 @@ export async function checkAccessibility(uri: String) {
     await page.goto(uri);
 
     const lighthouseConfig = {
-        /* ... your lighthouse configs */
       };
  
     const result: TLighthouseReport = await playAudit({ // only accessibility as the metric for performance thresholds
