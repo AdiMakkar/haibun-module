@@ -13,7 +13,8 @@ class TestHttpServer {
                 res.end(contents)
             } else if (req.url == 'fails.html') {
                 res.end(404);
-            } else {
+            } 
+            else {
                 throw Error(`no such path ${req.url}`)
                 res.end(404);
             }
@@ -43,11 +44,10 @@ describe('test audits with local server ', () => {
         const DOCTYPE = '<!DOCTYPE HTML>';
         const response = await axios.get('http://localhost:8080/passes.html');
         expect(response.data.substr(0, DOCTYPE.length)).toEqual(DOCTYPE);
-    })
+    });
     it('passes', async () => {
         const uri = 'http://localhost:8080/passes.html';
-        const res = await checkAccessibility(uri);
-
+        const res = await checkAccessibility(uri); 
         expect(res.ok).toBe(true);
-    });
+    }); 
 })
