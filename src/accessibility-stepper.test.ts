@@ -8,8 +8,7 @@ describe('accessibility test', () => {
   it('Verifies passing accessibility test', async () => {
     const feature = { path: '/features/test.feature', content: `serve files from test\ncheck the accessibility at http://localhost:8123/passes.html` };
     const result = await testWithDefaults([feature], [AccessibilityStepper, WebServerStepper]);
-    console.log('🤑', JSON.stringify(result, null, 2)); 
-    
-    expect(result.ok).toBe(true); // jest issue, toEqual
+    // console.log('🤑', JSON.stringify(result, null, 2)); 
+    expect(result.ok);
   });
 });

@@ -83,11 +83,11 @@ export async function checkAccessibility(uri: String) {
       };
  
     const result: TLighthouseReport = await playAudit({ // only accessibility as the metric for performance thresholds
-        page,
+        page: page,
         thresholds: {
             accessibility: 89, // passing value confirmed > 90
         },
-        config:lighthouseConfig,
+        config: lighthouseConfig,
         port: 9171
     });
     await browser.close();

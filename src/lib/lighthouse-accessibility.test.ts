@@ -11,7 +11,8 @@ class TestHttpServer {
                 const contents = readFileSync('./files/test/passes.html', 'utf-8');
                 res.writeHead(200);
                 res.end(contents)
-            } else if (req.url == 'fails.html') {
+            } 
+            else if (req.url == 'fails.html') {
                 res.end(404);
             } 
             else {
