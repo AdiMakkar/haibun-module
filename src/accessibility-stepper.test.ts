@@ -3,7 +3,7 @@ import WebServerStepper from "@haibun/web-server-express/build/web-server-steppe
 
 import AccessibilityStepper from './accessibility-stepper';
 
-jest.setTimeout(90000);
+jest.setTimeout(30000);
 describe('accessibility test', () => {
   it('Verifies passing accessibility test', async () => {
     const feature = { path: '/features/test.feature', content: `serve files from test\ncheck the accessibility at http://localhost:8123/passes.html` };

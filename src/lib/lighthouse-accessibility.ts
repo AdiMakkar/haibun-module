@@ -5,6 +5,7 @@ type TLighthouseReport = {
     failure?: {
         error: {
             message: string
+        
         }
     }
     lhr: {
@@ -22,7 +23,7 @@ export async function checkAccessibility(uri: String) {
     });
     const page = await browser.newPage();
     await page.goto(uri);
-
+    /**
     const lighthouseConfig = {
         onlyAudits: [
             'accesskeys',
@@ -81,13 +82,13 @@ export async function checkAccessibility(uri: String) {
             'visual-order-follows-dom'
         ]
       };
- 
+       */
     const result: TLighthouseReport = await playAudit({ // only accessibility as the metric for performance thresholds
         page: page,
         thresholds: {
             accessibility: 89, // passing value confirmed > 90
         },
-        config: lighthouseConfig,
+        // config: lighthouseConfig,
         port: 9171
     });
     await browser.close();

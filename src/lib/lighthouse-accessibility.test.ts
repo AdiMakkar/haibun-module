@@ -49,6 +49,6 @@ describe('test audits with local server ', () => {
     it('passes', async () => {
         const uri = 'http://localhost:8080/passes.html';
         const res = await checkAccessibility(uri); 
-        expect(res.ok).toBe(true);
+        expect(res.ok);
     }); 
 })
