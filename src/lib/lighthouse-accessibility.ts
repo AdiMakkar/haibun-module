@@ -86,7 +86,7 @@ export async function checkAccessibility(uri: String) {
     const result: TLighthouseReport = await playAudit({ // only accessibility as the metric for performance thresholds
         page: page,
         thresholds: {
-            accessibility: 89, // passing value confirmed > 90
+            accessibility: 95, // passing value confirmed > 95
         },
         // config: lighthouseConfig,
         port: 9171
